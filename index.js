@@ -1,6 +1,8 @@
 import DigiHelp from './digihelp';
 import listaDeAjuda from './listaDeAjuda.json'
 
-console.log(listaDeAjuda);
-console.log(DigiHelp);
-new DigiHelp(listaDeAjuda);
+let digiHelp = new DigiHelp(listaDeAjuda);
+
+window.onhashchange = () => {
+    digiHelp.configurarOConteudoDoBalao();
+};

@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "scripts": {
     "build": "webpack",
-    "build-watch": "webpack --watch --progress",
-    "start": "npm run build && node node_modules/http-server/bin/http-server ./"
+    "start-http": "node node_modules/http-server/bin/http-server ./",
+    "start": "npm-run-all build start-http"
   },
   "repository": {
     "type": "git",
@@ -25,6 +25,8 @@
     "digix-ui": "^2.4.25",
     "html-loader": "^0.5.5",
     "http-server": "^0.11.1",
+    "nodemon": "^1.18.5",
+    "npm-run-all": "^4.1.3",
     "style-loader": "^0.22.1",
     "webpack": "^4.23.1",
     "webpack-cli": "^3.1.2"

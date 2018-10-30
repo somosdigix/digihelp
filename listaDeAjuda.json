@@ -1,12 +1,34 @@
 [
     {
-        "informacao": {
-            "icone": "teste",
-            "titulo": "Teste 123",
-            "conteudo": "lararararara",
-            "url": [
-                "/","/lista", "/contrato", "/asd"
-            ]
-        }
+        "icone": "fal fa-info",
+        "titulo": "Teste para o pathname /",
+        "conteudo": "lararararara",
+        "url": [
+            "/"
+        ]
+    },
+    {
+        "icone": "teste",
+        "titulo": "Teste para o hash #!contrato",
+        "conteudo": "lararararara",
+        "url": [
+            "#!contrato", "#!contrato/notafiscal/item"
+        ]
+    },
+    {
+        "icone": "teste",
+        "titulo": "Teste para o hash #!contrato/notafiscal",
+        "conteudo": "lararararara",
+        "url": [
+            "#!contrato/notafiscal", "#!contrato/notafiscal/item"
+        ]
+    },
+    {
+        "icone": "teste",
+        "titulo": "Teste para o hash #!contrato/notafiscal/item aparecer em outras urls",
+        "conteudo": "lararararara",
+        "url": [
+            "#!contrato/notafiscal/item"
+        ]
     }
 ]

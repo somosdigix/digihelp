@@ -25,17 +25,17 @@ export default class BalaoDeAJuda {
     montarHtmlDoConteudo(informacoesParaMostrar) {
         let htmlDoConteudo = '';
         informacoesParaMostrar.forEach((informacaoParaMostrar) => {
-            htmlDoConteudo += `<div>
+            htmlDoConteudo += `<div style="cursor: pointer;">
                     <span class="${informacaoParaMostrar.icone}"></span>
-                    <span>${informacoesParaMostrar.titulo}</span>
+                    <span>${informacaoParaMostrar.titulo}</span>
                 </div>`
         });
         return htmlDoConteudo;
     }
 
-    filtrarItensDeAjudaDaUrl() {
-        let pathAtual = window.location.pathname;
-        let hashAtual = window.location.hash;
-        return this.listaDeAjuda.filter((itemDaListaDeAjuda) => [pathAtual, hashAtual].includes(itemDaListaDeAjuda.url));
+    filtrarItensDeAjudaDaUrl() {        
+        let hashAtual = window.location.hash.length > 0 ? window.location.hash : undefined;
+        let pathAtual = window.location.pathname === '/' && hashAtual === undefined ? window.location.pathname : undefined;
+        return this.listaDeAjuda.filter((itemDaListaDeAjuda) => itemDaListaDeAjuda.url.includes(pathAtual) || itemDaListaDeAjuda.url.includes(hashAtual));
     }
 }
