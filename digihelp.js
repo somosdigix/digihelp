@@ -1,6 +1,5 @@
-import './node_modules/digix-ui/ativos/css/digix-ui-base.css';
+import './css/main.css';
 import BalaoDeAjuda from './balaoDeAjuda';
-import { runInThisContext } from 'vm';
 
 export default class DigiHelp {
     constructor(listaDeAjuda) {
