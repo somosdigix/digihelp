@@ -1,0 +1,20 @@
+.central-ajuda {
+    width: 344px;
+    display: block;
+    max-width: 760px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 50px 0px rgba($cor-preta,0.25);
+}
+
+.central-ajuda__cabecalho {
+    height: 64px;
+    display: flex;
+    background-color: $cor-info;
+    color: $cor-branca;
+    border-radius: 5px 5px 0 0;
+}
+
+.central-ajuda__conteudo {
+    background-color: $cor-branca;
+    border-radius: 0 0 5px 5px;
+}

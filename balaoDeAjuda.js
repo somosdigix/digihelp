@@ -10,12 +10,16 @@ export default class BalaoDeAJuda {
         let informacoesParaMostrar = this.filtrarItensDeAjudaDaUrl();
         let htmlDoConteudo = this.montarHtmlDoConteudo(informacoesParaMostrar);
         this.elementoNoHtml.innerHTML = `
-            <div>
-                <header>
-                    <span>${this.tituloDoBalao}</span>
-                    <button>Fechar</button>
+            <div class="central-ajuda">
+                <header class="central-ajuda__cabecalho">
+                    <div class="grade__coluna"> 
+                        <span class="titulo_mini u-texto-negrito">${this.tituloDoBalao}</span>
+                    </div>
+                    <div class="grade__coluna grade__coluna_estreita">
+                        <button>Fechar</button>
+                    </div>
                 </header>
-                <div>
+                <div class="central-ajuda__conteudo">
                     ${htmlDoConteudo}
                 </div>
             </div>
