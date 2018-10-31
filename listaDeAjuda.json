@@ -2,7 +2,7 @@
     {
         "icone": "fal fa-align-left",
         "titulo": "Teste para o pathname /",
-        "conteudo": "lararararara",
+        "conteudo": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<a href=\"https://www.google.com\">Ir para o google</a></p>",
         "url": [
             "/"
         ]
