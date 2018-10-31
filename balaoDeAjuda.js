@@ -13,14 +13,19 @@ export default class BalaoDeAJuda {
             <div class="central-ajuda">
                 <header class="central-ajuda__cabecalho">
                     <div class="grade__coluna"> 
-                        <span class="titulo_mini u-texto-negrito">${this.tituloDoBalao}</span>
+                        <span class="u-margem-esquerda-pequena texto_grande">${this.tituloDoBalao}</span>
                     </div>
                     <div class="grade__coluna grade__coluna_estreita">
-                        <button>Fechar</button>
+                        <span class="u-margem-direita-pequena fal fa-times-circle fa-lg"></span>
                     </div>
                 </header>
                 <div class="central-ajuda__conteudo">
                     ${htmlDoConteudo}
+                </div>
+                <div class="central-ajuda__conteudo-contato">
+                    <button class="botao botao_medio botao_com-icone-para-esquerda">
+                        <i class="fal fa-comment u-margem-direita-mini"></i> Ainda tem dúvidas? Fale conosco
+                    </button>
                 </div>
             </div>
         `
@@ -29,10 +34,10 @@ export default class BalaoDeAJuda {
     montarHtmlDoConteudo(informacoesParaMostrar) {
         let htmlDoConteudo = '';
         informacoesParaMostrar.forEach((informacaoParaMostrar) => {
-            htmlDoConteudo += `<div style="cursor: pointer;">
-                    <span class="${informacaoParaMostrar.icone}"></span>
-                    <span>${informacaoParaMostrar.titulo}</span>
-                </div>`
+            htmlDoConteudo +=  `<div class="central-ajuda__conteudo-item">
+                                    <span class="grade__coluna grade__coluna_estreita u-margem-esquerda-pequena u-margem-direita-pequena texto_cor-info ${informacaoParaMostrar.icone} fa-lg"></span>
+                                    <span class="grade__coluna texto_cor-cinza-80">${informacaoParaMostrar.titulo}</span>
+                                </div>`
         });
         return htmlDoConteudo;
     }

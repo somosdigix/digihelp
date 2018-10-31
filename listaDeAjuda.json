@@ -1,6 +1,6 @@
 [
     {
-        "icone": "fal fa-info",
+        "icone": "fal fa-align-left",
         "titulo": "Teste para o pathname /",
         "conteudo": "lararararara",
         "url": [
@@ -8,7 +8,7 @@
         ]
     },
     {
-        "icone": "teste",
+        "icone": "fal fa-align-left",
         "titulo": "Teste para o hash #!contrato",
         "conteudo": "lararararara",
         "url": [
@@ -16,7 +16,7 @@
         ]
     },
     {
-        "icone": "teste",
+        "icone": "fal fa-align-left",
         "titulo": "Teste para o hash #!contrato/notafiscal",
         "conteudo": "lararararara",
         "url": [
@@ -24,7 +24,7 @@
         ]
     },
     {
-        "icone": "teste",
+        "icone": "fal fa-print",
         "titulo": "Teste para o hash #!contrato/notafiscal/item aparecer em outras urls",
         "conteudo": "lararararara",
         "url": [
