@@ -1,5 +1,5 @@
 import DigiHelp from './digihelp';
-import listaDeAjuda from './listaDeAjuda.json'
+import listaDeAjuda from './listaDeAjuda.json';
 
 let digiHelp = new DigiHelp(listaDeAjuda);
 

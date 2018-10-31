@@ -1,9 +1,13 @@
 .central-ajuda {
     width: 344px;
-    display: block;
-    max-width: 760px;
+    max-height: 760px;
     border-radius: 5px;
     box-shadow: 0px 0px 50px 0px rgba($cor-preta,.25);
+    z-index: 999;
+    position: fixed;
+    overflow-y: scroll;
+    margin-top: 8px;
+    background-color: $cor-branca
 }
 
 .central-ajuda__cabecalho {
@@ -14,11 +18,15 @@
     color: $cor-branca;
     border-radius: 5px 5px 0 0;
     font-weight: 600;
+    position: fixed;
+    width: 344px;
+    box-shadow: 0 5px 5px 0 rgba($cor-preta,.1);
 }
 
 .central-ajuda__conteudo {
     background-color: $cor-branca;
     border-radius: 0 0 5px 5px;
+    margin-top: 64px;
 }
 
 .central-ajuda__conteudo-item {
@@ -35,4 +43,12 @@
     display: flex;
     justify-content: center;
     padding: 12px 16px 16px 16px;
+}
+
+.central-ajuda__oculto {
+    display: none;
+}
+
+.central-ajuda__cursor-indicador {
+    cursor: pointer;
 }
