@@ -10,7 +10,7 @@
     {
         "icone": "fal fa-align-left",
         "titulo": "Teste para o hash #!contrato",
-        "conteudo": "lararararara",
+        "conteudo": "Conteudo Teste para o hash #!contrato",
         "url": [
             "#!contrato", "#!contrato/notafiscal/item"
         ]
@@ -18,7 +18,7 @@
     {
         "icone": "fal fa-align-left",
         "titulo": "Teste para o hash #!contrato/notafiscal",
-        "conteudo": "lararararara",
+        "conteudo": "Conteudo Teste para o hash #!contrato/notafiscal",
         "url": [
             "#!contrato/notafiscal", "#!contrato/notafiscal/item"
         ]
@@ -26,7 +26,7 @@
     {
         "icone": "fal fa-print",
         "titulo": "Teste para o hash #!contrato/notafiscal/item aparecer em outras urls",
-        "conteudo": "lararararara",
+        "conteudo": "Conteudo Teste para o hash #!contrato/notafiscal/item aparecer em outras urls",
         "url": [
             "#!contrato/notafiscal/item"
         ]

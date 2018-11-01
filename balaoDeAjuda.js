@@ -11,21 +11,20 @@ export default class BalaoDeAJuda {
         let informacoesParaMostrar = this.filtrarItensDeAjudaDaUrl();
         let htmlDoConteudo = this.montarHtmlDoConteudo(informacoesParaMostrar);
         this.elementoNoHtml.innerHTML = this.criarConteudoHtmlDoBotaoDeAjuda(htmlDoConteudo);
-        this.registrarAcaoNoBotaoDeAjuda();
-        this.registrarAcaoNoBotaoDeFechar();
-        this.registrarAcaoNasOpcoesDeAjuda();
+        this.registrarAcoesNosBotoes();
     }
 
     criarConteudoHtmlDoBotaoDeAjuda(htmlDoConteudo) {
         return `
                 <button data-ajuda-botao class="botao botao_medio">${this.tituloDoBotao}</button>
-                <div class="central-ajuda central-ajuda__oculto">
+                <div class="central-ajuda central-ajuda__oculto" data-central-ajuda>
                     <header class="central-ajuda__cabecalho">
-                        <div class="grade__coluna"> 
-                            <span class="u-margem-esquerda-pequena texto_grande">${this.tituloDoBalao}</span>
+                        <div class="grade__coluna u-margem-esquerda-pequena"> 
+                            <a class="fal fa-chevron-left fa-lg u-margem-direita-mini central-ajuda__oculto" data-ajuda-voltar></a>
+                            <span class="texto_grande">${this.tituloDoBalao}</span>
                         </div>
                         <div class="grade__coluna grade__coluna_estreita central-ajuda__cursor-indicador" data-ajuda-fechar>
-                            <span class="u-margem-direita-pequena fal fa-times-circle fa-lg"></span>
+                            <a class="u-margem-direita-pequena fal fa-times-circle fa-lg"></a>
                         </div>
                     </header>
                     <div class="central-ajuda__conteudo" data-ajuda-conteudo>
@@ -35,17 +34,24 @@ export default class BalaoDeAJuda {
             `;
     }
 
+    registrarAcoesNosBotoes() {
+        this.registrarAcaoNoBotaoDeAjuda();
+        this.registrarAcaoNoBotaoDeFechar();
+        this.registrarAcaoNasOpcoesDeAjuda();
+        this.registrarAcaoNoBotaoVoltar();
+    }
+
     registrarAcaoNoBotaoDeAjuda() {
         let botaoDeAjuda = this.elementoNoHtml.querySelector('[data-ajuda-botao]');
         botaoDeAjuda.addEventListener('click', () => {
-            this.elementoNoHtml.childNodes[3].classList.remove('central-ajuda__oculto');
+            this.elementoNoHtml.querySelector('[data-central-ajuda]').classList.remove('central-ajuda__oculto');
         });
     }
 
     registrarAcaoNoBotaoDeFechar() {
         let botaoFechar = this.elementoNoHtml.querySelector('[data-ajuda-fechar]');
         botaoFechar.addEventListener('click', () => {
-            this.elementoNoHtml.childNodes[3].classList.add('central-ajuda__oculto');
+            this.elementoNoHtml.querySelector('[data-central-ajuda]').classList.add('central-ajuda__oculto');
         });
     }
 
@@ -56,7 +62,16 @@ export default class BalaoDeAJuda {
                 let tituloDaOpcaoSelecionada = opcaoDeAjuda.querySelector('[data-opcao-de-ajuda-titulo]').innerText;
                 let itemReferenteAOpcaoSelecionada = this.listaDeAjuda.find((itemDeAjuda) => itemDeAjuda.titulo === tituloDaOpcaoSelecionada);
                 this.elementoNoHtml.querySelector('[data-ajuda-conteudo]').innerHTML = itemReferenteAOpcaoSelecionada.conteudo;
+                document.querySelector('[data-ajuda-voltar]').classList.remove('central-ajuda__oculto');
             });
+        });
+    }
+
+    registrarAcaoNoBotaoVoltar() {
+        let botaoVoltar = document.querySelector('[data-ajuda-voltar]');
+        botaoVoltar.addEventListener('click', () => {
+            this.configurarOConteudoDoBalao();
+            this.elementoNoHtml.querySelector('[data-central-ajuda]').classList.remove('central-ajuda__oculto');
         });
     }
 
