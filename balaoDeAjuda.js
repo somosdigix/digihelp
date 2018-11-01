@@ -20,11 +20,11 @@ export default class BalaoDeAJuda {
                 <div class="central-ajuda central-ajuda__oculto" data-central-ajuda>
                     <header class="central-ajuda__cabecalho">
                         <div class="grade__coluna u-margem-esquerda-pequena"> 
-                            <a class="fal fa-chevron-left fa-lg u-margem-direita-mini central-ajuda__oculto" data-ajuda-voltar></a>
-                            <span class="texto_grande">${this.tituloDoBalao}</span>
+                            <a class="fas fa-chevron-left fa-lg u-margem-direita-mini central-ajuda__cursor-indicador  central-ajuda__oculto" data-ajuda-voltar></a>
+                            <span class="titulo_mini u-texto-negrito">${this.tituloDoBalao}</span>
                         </div>
                         <div class="grade__coluna grade__coluna_estreita central-ajuda__cursor-indicador" data-ajuda-fechar>
-                            <a class="u-margem-direita-pequena fal fa-times-circle fa-lg"></a>
+                            <a class="u-margem-direita-pequena far fa-times-circle fa-lg"></a>
                         </div>
                     </header>
                     <div class="central-ajuda__conteudo" data-ajuda-conteudo>

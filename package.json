@@ -19,6 +19,8 @@
   },
   "homepage": "https://github.com/somosdigix/digihelp#readme",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.4.2",
+    "ajv": "^6.5.4",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",

@@ -17,7 +17,6 @@
     background-color: $cor-info;
     color: $cor-branca;
     border-radius: 5px 5px 0 0;
-    font-weight: 600;
     position: fixed;
     width: 344px;
     box-shadow: 0 5px 5px 0 rgba($cor-preta,.1);
@@ -26,7 +25,7 @@
 .central-ajuda__conteudo {
     background-color: $cor-branca;
     border-radius: 0 0 5px 5px;
-    margin-top: 64px;
+    margin: 63px 8px 0 8px;
 }
 
 .central-ajuda__conteudo-item {
@@ -35,8 +34,7 @@
     align-items: center;
     min-height: 64px;
     padding: 4px;
-    margin: 4px 8px;
-    border-bottom: 1px solid $cor-cinza-30
+    border-top: 1px solid $cor-cinza-30
 }
 
 .central-ajuda__conteudo-contato {

@@ -1,6 +1,6 @@
 [
     {
-        "icone": "fal fa-align-left",
+        "icone": "fas fa-align-left",
         "titulo": "Teste para o pathname /",
         "conteudo": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<a href=\"https://www.google.com\">Ir para o google</a></p>",
         "url": [
@@ -8,7 +8,7 @@
         ]
     },
     {
-        "icone": "fal fa-align-left",
+        "icone": "fas fa-align-left",
         "titulo": "Teste para o hash #!contrato",
         "conteudo": "Conteudo Teste para o hash #!contrato",
         "url": [
@@ -16,7 +16,7 @@
         ]
     },
     {
-        "icone": "fal fa-align-left",
+        "icone": "fas fa-align-left",
         "titulo": "Teste para o hash #!contrato/notafiscal",
         "conteudo": "Conteudo Teste para o hash #!contrato/notafiscal",
         "url": [
@@ -24,7 +24,7 @@
         ]
     },
     {
-        "icone": "fal fa-print",
+        "icone": "far fa-file",
         "titulo": "Teste para o hash #!contrato/notafiscal/item aparecer em outras urls",
         "conteudo": "Conteudo Teste para o hash #!contrato/notafiscal/item aparecer em outras urls",
         "url": [
