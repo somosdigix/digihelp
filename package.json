@@ -1,7 +1,7 @@
 {
   "name": "digihelp",
   "description": "Um componente frontend que cria uma modal de intruções para o usuário.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": {
     "name": "Diego Paniago",
     "email": "diegopaniago@digix.com.br",
@@ -14,7 +14,7 @@
     "node-sass": "node-sass --include-path sass sass/_digix-ui-base.scss css/main.css --output-style compressed",
     "server": "browser-sync start --server --files ./* --index ./index.html",
     "start": "npm-run-all -p -r watch-css build-watch server"
-  },  
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/somosdigix/digihelp.git"
@@ -44,8 +44,18 @@
     "webpack-cli": "^3.1.2"
   },
   "readmeFilename": "readme.md",
-  "keywords": ["helper", "ajuda", "digix", "somosdigix"],
-  "tags": ["helper", "ajuda", "digix", "somosdigix"],
+  "keywords": [
+    "helper",
+    "ajuda",
+    "digix",
+    "somosdigix"
+  ],
+  "tags": [
+    "helper",
+    "ajuda",
+    "digix",
+    "somosdigix"
+  ],
   "engines": {
     "node": ">=0.8.0"
   },
