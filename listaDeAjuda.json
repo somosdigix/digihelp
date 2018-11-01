@@ -10,7 +10,7 @@
     {
         "icone": "fas fa-align-left",
         "titulo": "Teste para o hash #!contrato",
-        "conteudo": "Conteudo Teste para o hash #!contrato",
+        "conteudo": "<div class=\"texto_cor-cinza-80 u-padding-pequena\"><h5 class=\"titulo_mini u-texto-negrito\">Passo a passo do lançamento de propostas</h5><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><h5 class=\"titulo_mini u-texto-negrito\">1. Adicione os fornecedores</h5><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><h5 class=\"titulo_mini u-texto-negrito\">2. Informe os valores e quantidades</h5><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut elit quis turpis varius lobortis eget sit amet sem. Fusce suscipit non ligula scelerisque ullamcorper. Vivamus purus nisl, bibendum quis egestas a, consequat id mi. Suspendisse in tristique tortor, at ultricies erat.</p><p>Suspendisse potenti. Proin laoreet quam a posuere sollicitudin. Maecenas consequat vestibulum eleifend. Maecenas nisl velit, rutrum vitae congue in, feugiat sit amet nisi. Nunc dapibus sapien neque, in sollicitudin sem mollis non. In eget faucibus leo. </p></div>",
         "url": [
             "#!contrato", "#!contrato/notafiscal/item"
         ]
