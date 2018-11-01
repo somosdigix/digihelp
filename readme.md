@@ -1,5 +1,5 @@
 # Digihelp
-## Um componente frontend que cria uma modal de intruções para o usuário.
+## Um componente frontend que cria uma modal de instruções para o usuário.
 
 ### Como utilizar
 
