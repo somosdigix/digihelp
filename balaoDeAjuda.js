@@ -61,7 +61,11 @@ export default class BalaoDeAJuda {
             opcaoDeAjuda.addEventListener('click', () => {
                 let tituloDaOpcaoSelecionada = opcaoDeAjuda.querySelector('[data-opcao-de-ajuda-titulo]').innerText;
                 let itemReferenteAOpcaoSelecionada = this.listaDeAjuda.find((itemDeAjuda) => itemDeAjuda.titulo === tituloDaOpcaoSelecionada);
-                this.elementoNoHtml.querySelector('[data-ajuda-conteudo]').innerHTML = itemReferenteAOpcaoSelecionada.conteudo;
+                this.elementoNoHtml.querySelector('[data-ajuda-conteudo]').innerHTML = `
+                    <div class="texto_cor-cinza-80 u-padding-pequena">
+                        ${itemReferenteAOpcaoSelecionada.conteudo}
+                    </div>
+                `;
                 document.querySelector('[data-ajuda-voltar]').classList.remove('central-ajuda__oculto');
             });
         });
