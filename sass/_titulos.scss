@@ -1,0 +1,46 @@
+@mixin titulo-padrao() {
+  @include fonte-regular;
+  @include resetar-titulo;
+}
+
+.titulo_gigante {
+  @include titulo-padrao;
+  font-size: 40px; 
+}
+
+.titulo_grande {
+  @include titulo-padrao;
+  font-size: 32px;
+}
+
+.titulo_medio {
+  @include titulo-padrao;
+  font-size: 28px;
+}
+
+.titulo_pequeno {
+  @include titulo-padrao;
+  font-size: 24px;
+}
+
+.titulo_mini {
+  @include titulo-padrao;
+  font-size: 20px;
+}
+
+// Cores Títulos
+
+$cores-dos-titulos:   (cor-primaria, $cor-primaria),
+                      (cor-secundaria, $cor-secundaria),
+                      (cor-terciaria, $cor-terciaria),
+                      (cor-quaternaria, $cor-quaternaria),
+                      (cor-erro, $cor-erro),
+                      (cor-atencao, $cor-atencao),
+                      (cor-sucesso, $cor-sucesso),
+                      (cor-info, $cor-info);
+
+@each $nome, $cor in $cores-dos-titulos {
+  .titulo_#{$nome} {
+  color: $cor;
+  }
+}

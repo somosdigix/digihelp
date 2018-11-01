@@ -1,0 +1,238 @@
+// Bloco
+.botao {
+  @include borda-arredondada-padrao();
+  @include transicao-padrao();
+  @include fonte-seminegrito();
+  font-family: $fonte-padrao;
+  display: inline-block;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  background: $cor-botao-acao;
+  color: $cor-botao-acao-invertida;
+  border: 2px solid transparent;
+  font-size: 16px;
+  height: 40px;
+  padding: 0 16px;
+  &:hover,
+  &:focus {
+    background-color: darken(saturate($cor-botao-acao, 100%), 15%);
+  }
+  &:focus {
+    outline: none;
+  }
+  &:active {
+    transform: translateY(1px);
+  }
+}
+
+a.botao {
+  display: inline-flex;
+  align-items: center;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+// Modificadores de tipo
+
+
+.botao_contorno {
+  border: 2px solid rgba($cor-botao-acao, 0.5);
+  color: $cor-botao-acao;
+  background: transparent;
+  box-sizing: border-box;
+  &:hover,
+  &:focus {
+    border: 2px solid $cor-botao-acao;
+    background: transparent;
+  }
+}
+
+.botao_contorno-invertido {
+  border: 2px solid rgba($cor-botao-acao, 0.5);
+  color: $cor-botao-acao;
+  background: $cor-botao-acao-invertida;
+  box-sizing: border-box;
+  &:hover,
+  &:focus {
+    border: 2px solid $cor-botao-acao;
+    color: $cor-botao-acao-invertida;
+  }
+}
+
+.botao_sem-preenchimento {
+  color: $cor-botao-acao;
+  background: transparent;
+  border: 2px solid transparent;
+  &:hover,
+  &:focus {
+    background: rgba($cor-botao-acao, 0.1);
+  }
+  &:focus {
+    border: 2px solid rgba($cor-botao-acao, 0.5);
+  }
+}
+
+.botao_sem-preenchimento-invertido {
+  color: $cor-botao-acao;
+  background: $cor-botao-acao-invertida;
+  border: 2px solid transparent;
+  &:hover,
+  &:focus {
+    background: rgba($cor-botao-acao, 1.0);
+    color: $cor-botao-acao-invertida;
+  }
+  &:focus {
+    border: 2px solid rgba($cor-botao-acao, 1.0);
+  }
+}
+
+// Modificadores de tamanho
+.botao_mini {
+  height: 24px;
+  padding: 0 8px;
+  font-size: 12px;
+  &.botao_icone {
+    width: 24px;
+  }
+}
+
+.botao_pequeno {
+  height: 32px;
+  padding: 0 12px;
+  font-size: 14px;
+  &.botao_icone {
+    width: 32px;
+  }
+}
+
+.botao_medio {
+  height: 40px;
+  padding: 0 16px;
+  &.botao_icone {
+    width: 40px;
+  }
+}
+
+.botao_grande {
+  height: 48px;
+  padding: 0 20px;
+  &.botao_icone {
+    width: 48px;
+  }
+}
+
+.botao_gigante {
+  height: 56px;
+  padding: 0 24px;
+  &.botao_icone {
+    width: 56px;
+  }
+}
+
+// Modificadores para ícones
+.botao_icone {
+  text-align: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.botao_com-icone-para-esquerda {
+  svg {
+    margin-right: 4px;
+    flex-shrink: 0;
+  }
+}
+
+.botao_com-icone-para-direita {
+  svg {
+    margin-left: 4px;
+    flex-shrink: 0;
+  }
+}
+
+// Modificadores de cores
+@each $nome,
+$cores in $cores-dos-botoes {
+  $cor: nth($cores, 1);
+  $cor-invertida: nth($cores, 2);
+  .botao_#{$nome} {
+    background-color: $cor;
+    color: $cor-branca;
+    &:hover,
+    &:focus {
+      background: darken($cor, 15%);
+    }
+  }
+  .botao_contorno {
+    &.botao_#{$nome} {
+      color: $cor;
+      border: 2px solid rgba($cor, 0.5);
+      background: transparent;
+      &:hover,
+      &:focus {
+        border: 2px solid $cor;
+      }
+    }
+  }
+  .botao_invertido {
+    &.botao_#{$nome} {
+      color: $cor;
+      background: $cor-branca;
+      &:hover,
+      &:focus {
+        background: rgba($cor-branca, .8);
+      }
+    }
+  }
+  .botao_contorno-invertido {
+    &.botao_#{$nome} {
+      color: $cor;
+      border: 2px solid rgba($cor, 0.5);
+      background: $cor-branca;
+      &:hover,
+      &:focus {
+        border: 2px solid $cor;
+        color: $cor-branca;
+        background: $cor;
+      }
+    }
+  }
+  .botao_sem-preenchimento {
+    &.botao_#{$nome} {
+      color: $cor;
+      background: transparent;
+      &:hover,
+      &:focus {
+        background: rgba($cor, 0.1);
+      }
+      &:focus {
+        border: 2px solid rgba($cor, 0.1);
+      }
+    }
+  }
+  .botao_sem-preenchimento-invertido {
+    &.botao_#{$nome} {
+      color: $cor;
+      background: $cor-branca;
+      &:hover,
+      &:focus {
+        background: rgba($cor, 1.0);
+        color: $cor-branca;
+      }
+      &:focus {
+        border: 2px solid rgba($cor, 1.0);
+      }
+    }
+  }
+}
+
+// Modificadores de estado
+.botao_desabilitado,
+button:disabled,
+input[type="button"]:disabled,
+input[type="submit"]:disabled,
+input[type="reset"]:disabled {
+  @include desabilitado;
+}

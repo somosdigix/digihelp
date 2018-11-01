@@ -1,2 +1,12 @@
-@import "../node_modules/digix-ui/ativos/sass/digix-ui-base.scss";
+@import "./_cores.scss";
+@import "./_mixins.scss";
+@import "./_tipografia.scss";
+@import "./_titulos.scss";
+
+@import "./_botao.scss";
+@import "./_grade.scss";
+@import "./_texto.scss";
+
+@import "./_utilitarios.scss";
+
 @import "./central-ajuda.scss";

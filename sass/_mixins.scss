@@ -1,0 +1,101 @@
+@mixin transicao-padrao {
+  transition: .2s all ease-in-out;
+}
+
+@mixin borda-arredondada-padrao {
+  border-radius: 5px;
+}
+
+@mixin sombra-padrao($direcao) {
+
+  $opacidade-da-sombra: .16;
+  $desfoque-da-sombra: 10px;
+
+  @if ($direcao == 'baixo') {
+    box-shadow: 0px 4px $desfoque-da-sombra rgba($cor-preta, $opacidade-da-sombra);
+  }
+  @if ($direcao == 'cima') {
+    box-shadow: 0px -4px $desfoque-da-sombra rgba($cor-preta, $opacidade-da-sombra);
+  }
+  @if ($direcao == 'direita') {
+    box-shadow: 4px 0px $desfoque-da-sombra rgba($cor-preta, $opacidade-da-sombra);
+  }
+  @if ($direcao == 'esquerda') {
+    box-shadow: -4px 0px $desfoque-da-sombra rgba($cor-preta, $opacidade-da-sombra);
+  }
+}
+
+@mixin calcular-entrelinhas($tamanho-da-fonte) {
+	line-height: $tamanho-da-fonte * 1.4;
+}
+
+@mixin fonte-regular {
+  font-weight: 400;
+}
+
+@mixin fonte-seminegrito {
+  font-weight: 600;
+}
+
+@mixin fonte-negrito {
+  font-weight: 700;
+}
+
+@mixin resetar-lista {
+  list-style-type: none;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-start: 0;
+  margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+  vertical-align: baseline;
+  list-style: none;
+}
+
+@mixin resetar-linha {
+  height: 1px;
+  color: $cor-cinza-30;
+  background-color: $cor-cinza-30;
+  border: none;
+}
+
+@mixin resetar-titulo {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin resetar-paragrafo {
+  @include resetar-titulo;
+}
+
+@mixin desabilitado {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+// Pontos de quebra
+
+@mixin somente-telefone {
+  @media (max-width: 599px) { @content; }
+}
+@mixin maior-que-telefone {
+  @media (min-width: 600px) { @content; }
+}
+@mixin maior-que-tablet {
+  @media (min-width: 900px) { @content; }
+}
+@mixin maior-que-desktop-pequeno {
+  @media (min-width: 1200px) { @content; }
+}
+@mixin maior-que-desktop-grande {
+  @media (min-width: 1800px) { @content; }
+}

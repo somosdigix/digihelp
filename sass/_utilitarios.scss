@@ -1,0 +1,139 @@
+// Texto estilo
+
+.u-texto-negrito {
+  @include fonte-negrito;
+}
+.u-texto-italico {
+  font-style: italic;
+}
+.u-texto-riscado {
+  text-decoration: line-through;
+}
+
+.u-texto-maiusculo {
+  text-transform: uppercase !important;
+}
+.u-texto-capitalizado {
+  text-transform: capitalize !important;
+}
+
+.u-texto-sup {
+  vertical-align: super;
+  font-size: smaller;
+}
+.u-texto-sub {
+  vertical-align: sub;
+  font-size: smaller;
+}
+
+.u-texto-alinhado-ao-centro {
+  text-align: center !important;
+}
+.u-texto-alinhado-a-direita {
+  text-align: right !important;
+}
+.u-texto-alinhado-a-esquerda {
+  text-align: left !important;
+}
+.u-alinhamento-vertical-ao-topo {
+  vertical-align: top;
+}
+.u-alinhamento-vertical-ao-centro {
+  vertical-align: middle;
+}
+.u-alinhamento-vertical-a-base {
+  vertical-align: bottom;
+}
+
+
+
+// Texto outros
+
+.u-texto-truncado {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: inline-block;
+}
+
+// Margens e paddings
+
+$tamanhos-de-espaco:  (mini, 4px),
+                      (pequena, 8px),
+                      (media, 16px),
+                      (grande, 32px),
+                      (gigante, 64px);
+
+@each $nome, $tamanho in $tamanhos-de-espaco {
+  .u-margem-superior-#{$nome} {
+    margin-top: $tamanho !important;
+  }
+  .u-margem-inferior-#{$nome} {
+    margin-bottom: $tamanho !important;
+  }
+  .u-margem-esquerda-#{$nome} {
+    margin-left: $tamanho !important;
+  }
+  .u-margem-direita-#{$nome} {
+    margin-right: $tamanho !important;
+  }
+  .u-margem-#{$nome} {
+    margin: $tamanho !important;
+  }
+  .u-padding-superior-#{$nome} {
+    padding-top: $tamanho !important;
+  }
+  .u-padding-inferior-#{$nome} {
+    padding-bottom: $tamanho !important;
+  }
+  .u-padding-esquerda-#{$nome} {
+    padding-left: $tamanho !important;
+  }
+  .u-padding-direita-#{$nome} {
+    padding-right: $tamanho !important;
+  }
+  .u-padding-#{$nome} {
+    padding: $tamanho !important;
+  }
+}
+.u-sem-margem {
+  margin: 0 !important;
+}
+.u-sem-padding {
+  padding: 0 !important;
+}
+
+// Visibilidade
+
+.u-escondido {
+    display: none !important;
+}
+.u-invisivel {
+    visibility: hidden !important;
+}
+
+// Estado
+
+.u-desabilitado {
+  @include desabilitado;
+}
+
+// Outros
+
+.u-sem-borda {
+  border: 0 solid transparent !important;
+}
+
+// Displays
+.u-exibir-bloco {
+  display: block !important;
+}
+.u-exibir-em-linha {
+  display: inline !important;
+}
+.u-exibir-bloco-em-linha {
+  display: inline-block !important;
+}
+.u-exibir-em-linha-flexivel {
+  display: inline-flex !important;
+}

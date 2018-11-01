@@ -1,0 +1,118 @@
+// Tamanhos dos textos
+
+$texto-mini: 12px;
+$texto-pequeno: 14px;
+$texto-medio: 16px;
+$texto-grande: 18px;
+$texto-gigante: 20px;
+
+// Bloco
+
+.texto {
+	color: $cor-cinza-90;
+	-webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+}
+
+// Modificadores de cor
+
+.texto_cor-alerta {
+	color: $cor-texto-alerta;
+}
+
+.texto_cor-sucesso {
+	color: $cor-sucesso;
+}
+
+.texto_cor-atencao {
+	color: $cor-atencao;
+}
+
+.texto_cor-info {
+	color: $cor-info;
+}
+.texto_cor-primaria {
+	color: $cor-primaria;
+}
+
+.texto_cor-secundaria {
+	color: $cor-secundaria;
+}
+
+.texto_cor-terciaria {
+	color: $cor-terciaria;
+}
+
+.texto_cor-quaternaria {
+	color: $cor-quaternaria;
+}
+
+.texto_cor-cinza-90 {
+	color: $cor-cinza-90;
+}
+
+.texto_cor-cinza-80 {
+	color: $cor-cinza-80;
+}
+
+.texto_cor-cinza-70 {
+	color: $cor-cinza-70;
+}
+
+.texto_cor-cinza-60 {
+	color: $cor-cinza-60;
+}
+
+.texto_cor-cinza-50 {
+	color: $cor-cinza-50;
+}
+
+// Modificadores de tamanho
+
+.texto_mini {
+	font-size: $texto-mini;
+}
+
+.texto_pequeno {
+	font-size: $texto-pequeno;
+}
+
+.texto_medio {
+	font-size: $texto-medio;
+}
+
+.texto_grande {
+	font-size: $texto-grande;
+}
+
+.texto_gigante {
+	font-size: $texto-gigante;
+}
+
+// Modificador de parágrafo
+
+.texto_paragrafo {
+	
+	&.texto_mini {
+		@include calcular-entrelinhas($texto-mini);
+	}
+
+	&.texto_pequeno {
+		@include calcular-entrelinhas($texto-pequeno);
+	}
+
+	&.texto_medio {
+		@include calcular-entrelinhas($texto-medio);
+	}
+
+	&.texto_grande {
+		@include calcular-entrelinhas($texto-grande);
+    }
+
+    &.texto_gigante {
+		@include calcular-entrelinhas($texto-gigante);
+    }
+    
+}
