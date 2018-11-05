@@ -1,4 +1,4 @@
-import DigiHelp from './digihelp';
+import DigiHelp from './dist/digihelp';
 import listaDeAjuda from './listaDeAjuda.json';
 
 let digiHelp = new DigiHelp(listaDeAjuda);
