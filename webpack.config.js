@@ -3,8 +3,8 @@ let webpack = require('webpack');
 
 module.exports = {
     entry: {
-        digihelp: './digihelp.js',
-        index: './index.js'
+        index: './app/digihelp.js',
+        exemplo: './index.js'
     },
     output: {
         path: path.resolve(__dirname, 'dist'),

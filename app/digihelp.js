@@ -1,4 +1,4 @@
-import './css/main.css';
+import '../css/main.css';
 import BalaoDeAjuda from './balaoDeAjuda';
 
 export default class DigiHelp {
