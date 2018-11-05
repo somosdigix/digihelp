@@ -4,6 +4,8 @@ export default class BalaoDeAJuda {
         this.elementoNoHtml = document.querySelector('[data-ajuda]');
         this.tituloDoBotao = this.elementoNoHtml.getAttribute('data-titulo-ajuda-botao') ? this.elementoNoHtml.getAttribute('data-titulo-ajuda-botao') : 'Precisa de ajuda?';
         this.tituloDoBalao = this.elementoNoHtml.getAttribute('data-ajuda-titulo') ? this.elementoNoHtml.getAttribute('data-ajuda-titulo') : 'Precisa de ajuda?';
+        this.iconeFecharBalao = this.elementoNoHtml.getAttribute('data-ajuda-botao-fechar') ? this.elementoNoHtml.getAttribute('data-ajuda-botao-fechar') : ' far fa-times-circle fa-lg';
+        this.iconeVoltarBalao = this.elementoNoHtml.getAttribute('data-ajuda-botao-voltar') ? this.elementoNoHtml.getAttribute('data-ajuda-botao-voltar') : ' fas fa-chevron-left fa-lg';
         this.configurarOConteudoDoBalao();
     }
 
@@ -20,11 +22,11 @@ export default class BalaoDeAJuda {
                 <div class="central-ajuda central-ajuda__oculto" data-central-ajuda>
                     <header class="central-ajuda__cabecalho">
                         <div class="grade__coluna u-margem-esquerda-pequena"> 
-                            <a class="fas fa-chevron-left fa-lg u-margem-direita-mini central-ajuda__cursor-indicador  central-ajuda__oculto" data-ajuda-voltar></a>
+                            <a class="u-margem-direita-mini central-ajuda__cursor-indicador central-ajuda__oculto ${this.iconeVoltarBalao}" data-ajuda-voltar></a>
                             <span class="titulo_mini u-texto-negrito">${this.tituloDoBalao}</span>
                         </div>
                         <div class="grade__coluna grade__coluna_estreita central-ajuda__cursor-indicador" data-ajuda-fechar>
-                            <a class="u-margem-direita-pequena far fa-times-circle fa-lg"></a>
+                            <a class="u-margem-direita-pequena ${this.iconeFecharBalao}"></a>
                         </div>
                     </header>
                     <div class="central-ajuda__conteudo" data-ajuda-conteudo>
