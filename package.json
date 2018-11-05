@@ -1,19 +1,21 @@
 {
   "name": "digihelp",
   "description": "Um componente frontend que cria uma modal de instruções para o usuário.",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "author": {
     "name": "Diego Paniago",
     "email": "diegopaniago@digix.com.br",
     "homepage": "https://github.com/somosdigix/"
   },
   "scripts": {
-    "build": "npm run node-sass && webpack --optimize-minimize",
-    "build-watch": "webpack --watch --progress --optimize-minimize",
+    "build": "npm run node-sass && webpack --config webpack.config.js --optimize-minimize",
+    "build-exemplo": "npm run build && webpack --config webpackExemplo.config.js --optimize-minimize",
+    "build-watch": "webpack --config ./webpack.config.js --watch --progress --optimize-minimize",
+    "build-watch-exemplo": "webpack --config webpackExemplo.config.js --watch --progress --optimize-minimize",
     "watch-css": "nodemon -e scss -x \"npm run node-sass\"",
     "node-sass": "node-sass --include-path sass sass/_digix-ui-base.scss css/main.css --output-style compressed",
     "server": "browser-sync start --server --files ./* --index ./index.html",
-    "start": "npm-run-all -p -r watch-css build-watch server"
+    "start": "npm-run-all -p -r watch-css build-watch build-watch-exemplo server"
   },
   "repository": {
     "type": "git",
@@ -58,5 +60,5 @@
   "engines": {
     "node": ">=0.8.0"
   },
-  "main": "./dist/index.js"
+  "main": "./dist/digihelp.js"
 }
