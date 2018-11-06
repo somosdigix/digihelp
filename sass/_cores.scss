@@ -22,13 +22,6 @@ $cor-info-invertido: inverterCor($cor-info);
 
 $cor-texto-alerta: $vermelho;
 
-// Cores invertidas
-
-$cor-primaria-invertida: inverterCor($cor-primaria);
-$cor-secundaria-invertida: inverterCor($cor-secundaria);
-$cor-terciaria-invertida: inverterCor($cor-terciaria);
-$cor-quaternaria-invertida: inverterCor($cor-quaternaria);
-
 // Tons de cinza
 
 $cor-branca: #FFF !default;
