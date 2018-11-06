@@ -91,9 +91,26 @@ export default class BalaoDeAJuda {
     }
 
     filtrarItensDeAjudaDaUrl() {        
-        let hashAtual = window.location.hash.length > 0 ? window.location.hash : undefined;
-        let pathAtual = window.location.pathname === '/' && hashAtual === undefined ? window.location.pathname : undefined;
-        return this.listaDeAjuda.filter((itemDaListaDeAjuda) => itemDaListaDeAjuda.url.includes(pathAtual) || itemDaListaDeAjuda.url.includes(hashAtual));
+        let itensDeAjudaFiltrados = [];
+        let urlAtual = this.obterUrlAtual();
+        this.listaDeAjuda.forEach((itemDaListaDeAjuda) => {
+            itemDaListaDeAjuda.url.forEach((urlDoItemDaListaDeAjuda) => {
+                let urlComRegex = urlDoItemDaListaDeAjuda.replace('{param}', '([^}]+)');
+                urlComRegex = urlComRegex.replace('{fim}', '$');
+                if(urlAtual.match(urlComRegex) && !itensDeAjudaFiltrados.includes(itemDaListaDeAjuda)) {                    
+                    itensDeAjudaFiltrados.push(itemDaListaDeAjuda);
+                }
+            });
+        });
+        return itensDeAjudaFiltrados;
+    }
+
+    obterUrlAtual() {
+        let urlAtual = window.location.href;
+        if(urlAtual[urlAtual.length - 1] !== '/') {
+            urlAtual = urlAtual + '/';
+        }
+        return urlAtual;
     }
 
 }

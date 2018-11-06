@@ -10,8 +10,8 @@
   "scripts": {
     "build": "npm run node-sass && webpack --config webpack.config.js --optimize-minimize",
     "build-exemplo": "npm run build && webpack --config webpackExemplo.config.js --optimize-minimize",
-    "build-watch": "webpack --config ./webpack.config.js --watch --progress --optimize-minimize",
-    "build-watch-exemplo": "webpack --config webpackExemplo.config.js --watch --progress --optimize-minimize",
+    "build-watch": "webpack --config ./webpack.config.js --watch --progress",
+    "build-watch-exemplo": "webpack --config webpackExemplo.config.js --watch --progress",
     "watch-css": "nodemon -e scss -x \"npm run node-sass\"",
     "node-sass": "node-sass --include-path sass sass/_digix-ui-base.scss css/main.css --output-style compressed",
     "server": "browser-sync start --server --files ./* --index ./index.html",
