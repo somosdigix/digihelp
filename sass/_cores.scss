@@ -1,11 +1,3 @@
-// Cores variáveis 
-
-$cor-primaria: #2C006A !default;
-$cor-secundaria: #0bc0d3 !default;
-$cor-terciaria: #190342 !default;
-$cor-quaternaria: #0F0228 !default;
-
-
 // ATENÇÃO! Não utilize essas variáveis fora deste arquivo
 $vermelho: #FA3737 !default;
 $azul: #3389FE !default;
@@ -70,10 +62,10 @@ $cor-cinza-20-invertido: inverterCor($cor-cinza-20);
 $cor-cinza-10-invertido: inverterCor($cor-cinza-10);
 $cor-cinza-05-invertido: inverterCor($cor-cinza-05);
 
-$cores: ("cor-branca": ($cor-branca, $cor-preta), "cor-preta": ($cor-preta, $cor-branca), "cor-cinza-05": ($cor-cinza-05, $cor-cinza-05-invertido), "cor-cinza-10": ($cor-cinza-10, $cor-cinza-10-invertido), "cor-cinza-20": ($cor-cinza-20, $cor-cinza-20-invertido), "cor-cinza-30": ($cor-cinza-30, $cor-cinza-30-invertido), "cor-cinza-40": ($cor-cinza-40, $cor-cinza-40-invertido), "cor-cinza-50": ($cor-cinza-50, $cor-cinza-50-invertido), "cor-cinza-60": ($cor-cinza-60, $cor-cinza-60-invertido), "cor-cinza-70": ($cor-cinza-70, $cor-cinza-70-invertido), "cor-cinza-80": ($cor-cinza-80, $cor-cinza-80-invertido), "cor-cinza-90": ($cor-cinza-90, $cor-cinza-90-invertido), "cor-primaria": ($cor-primaria, $cor-primaria-invertida), "cor-secundaria": ($cor-secundaria, $cor-secundaria-invertida), "cor-terciaria": ($cor-terciaria, $cor-terciaria-invertida), "cor-quaternaria": ($cor-quaternaria, $cor-quaternaria-invertida), "cor-info": ($cor-info, $cor-info-invertido), "cor-sucesso": ($cor-sucesso, $cor-sucesso-invertido), "cor-atencao": ($cor-atencao, $cor-atencao-invertido), "cor-erro": ($cor-erro, $cor-erro-invertido)) !default;
+$cores: ("cor-branca": ($cor-branca, $cor-preta), "cor-preta": ($cor-preta, $cor-branca), "cor-cinza-05": ($cor-cinza-05, $cor-cinza-05-invertido), "cor-cinza-10": ($cor-cinza-10, $cor-cinza-10-invertido), "cor-cinza-20": ($cor-cinza-20, $cor-cinza-20-invertido), "cor-cinza-30": ($cor-cinza-30, $cor-cinza-30-invertido), "cor-cinza-40": ($cor-cinza-40, $cor-cinza-40-invertido), "cor-cinza-50": ($cor-cinza-50, $cor-cinza-50-invertido), "cor-cinza-60": ($cor-cinza-60, $cor-cinza-60-invertido), "cor-cinza-70": ($cor-cinza-70, $cor-cinza-70-invertido), "cor-cinza-80": ($cor-cinza-80, $cor-cinza-80-invertido), "cor-cinza-90": ($cor-cinza-90, $cor-cinza-90-invertido), "cor-info": ($cor-info, $cor-info-invertido), "cor-sucesso": ($cor-sucesso, $cor-sucesso-invertido), "cor-atencao": ($cor-atencao, $cor-atencao-invertido), "cor-erro": ($cor-erro, $cor-erro-invertido)) !default;
 
 // Cores dos botões
 $cor-botao-acao: $azul;
 $cor-botao-acao-invertida: inverterCor($cor-botao-acao);
 
-$cores-dos-botoes: ("branca": ($cor-branca, $cor-preta), "cinza": ($cor-cinza-50, $cor-cinza-50-invertido), "primaria": ($cor-primaria, $cor-primaria-invertida), "secundaria": ($cor-secundaria, $cor-secundaria-invertida), "terciaria": ($cor-terciaria, $cor-terciaria-invertida), "quaternaria": ($cor-quaternaria, $cor-quaternaria-invertida), "info": ($cor-info, $cor-info-invertido), "sucesso": ($cor-sucesso, $cor-sucesso-invertido), "atencao": ($cor-atencao, $cor-atencao-invertido), "alerta": ($cor-erro, $cor-erro-invertido), "erro": ($cor-erro, $cor-erro-invertido)) !default;
+$cores-dos-botoes: ("branca": ($cor-branca, $cor-preta), "cinza": ($cor-cinza-50, $cor-cinza-50-invertido), "info": ($cor-info, $cor-info-invertido), "sucesso": ($cor-sucesso, $cor-sucesso-invertido), "atencao": ($cor-atencao, $cor-atencao-invertido), "alerta": ($cor-erro, $cor-erro-invertido), "erro": ($cor-erro, $cor-erro-invertido)) !default;
