@@ -4,9 +4,9 @@
 ### Como utilizar
 
  - Primeiramente instale o Digihelp no seu projeto usando `npm install --save digihelp`
- - Adicione no html da suas paginas onde deseja que o botão de ajuda apereça a tag `<div class="central-ajuda__botao" data-ajuda></div>`
+ - Adicione no html das suas paginas onde deseja que o botão de ajuda apereça a tag `<div class="central-ajuda__botao" data-ajuda></div>`
  - Realize o import da biblioteca dentro do seu projeto de acordo com sua necessidade
- - Você Precisa de um arquivo JSON com o padrão a seguir contendo todas as instruções para os usuários e em quais paginas essas instruções devem aparecer
+ - Você precisa de um arquivo JSON com o padrão a seguir contendo todas as instruções para os usuários e em quais paginas essas instruções devem aparecer
   * Exemplo:
    ```
         [
