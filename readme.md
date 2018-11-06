@@ -1,4 +1,4 @@
-# Digihelp [![Build Status](https://travis-ci.org/somosdigix/enviadordeemail.svg?branch=master)](https://travis-ci.org/somosdigix/enviadordeemail)
+# Digihelp [![Build Status](https://travis-ci.org/somosdigix/digihelp.svg?branch=master)](https://travis-ci.org/somosdigix/digihelp)
 ## Um componente frontend que cria uma modal de instruções para o usuário.
 
 ### Como utilizar
