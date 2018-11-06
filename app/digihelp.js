@@ -1,3 +1,4 @@
+import '../css/all.css';
 import '../css/main.css';
 import BalaoDeAjuda from './balaoDeAjuda';
 
