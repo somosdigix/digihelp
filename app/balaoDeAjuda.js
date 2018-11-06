@@ -61,10 +61,10 @@ export default class BalaoDeAJuda {
         let opcoesDeAjuda = document.querySelectorAll('[data-opcao-de-ajuda]');
         opcoesDeAjuda.forEach((opcaoDeAjuda) => {
             opcaoDeAjuda.addEventListener('click', () => {
-                let tituloDaOpcaoSelecionada = opcaoDeAjuda.querySelector('[data-opcao-de-ajuda-titulo]').innerText;
+                let tituloDaOpcaoSelecionada = opcaoDeAjuda.querySelector('[data-opcao-de-ajuda-titulo]').innerHTML;
                 let itemReferenteAOpcaoSelecionada = this.listaDeAjuda.find((itemDeAjuda) => itemDeAjuda.titulo === tituloDaOpcaoSelecionada);
                 this.elementoNoHtml.querySelector('[data-ajuda-conteudo]').innerHTML = `
-                    <div class="texto_cor-cinza-80 u-padding-pequena">
+                    <div class="texto_cor-cinza-80 u-padding-pequena" data-ajuda-conteudo-do-topico>
                         ${itemReferenteAOpcaoSelecionada.conteudo}
                     </div>
                 `;

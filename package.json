@@ -1,21 +1,23 @@
 {
   "name": "digihelp",
   "description": "Um componente frontend que cria uma modal de instruções para o usuário.",
-  "version": "1.1.8",
+  "version": "1.1.9",
   "author": {
     "name": "Diego Paniago",
     "email": "diegopaniago@digix.com.br",
     "homepage": "https://github.com/somosdigix/"
   },
   "scripts": {
-    "build": "npm run node-sass && webpack --config webpack.config.js --optimize-minimize",
+    "build": "npm run node-sass && npm run test && webpack --config webpack.config.js --optimize-minimize",
     "build-exemplo": "npm run build && webpack --config webpackExemplo.config.js --optimize-minimize",
     "build-watch": "webpack --config ./webpack.config.js --watch --progress",
     "build-watch-exemplo": "webpack --config webpackExemplo.config.js --watch --progress",
     "watch-css": "nodemon -e scss -x \"npm run node-sass\"",
     "node-sass": "node-sass --include-path sass sass/_digix-ui-base.scss css/main.css --output-style compressed",
     "server": "browser-sync start --server --files ./* --index ./index.html",
-    "start": "npm-run-all -p -r watch-css build-watch build-watch-exemplo server"
+    "start": "npm run test && npm-run-all -p -r watch-css build-watch build-watch-exemplo server",
+    "build-teste": "npm run node-sass && webpack --config webpackTeste.config.js",
+    "test": "npm run build-teste && node node_modules/mocha/bin/mocha -r ./test/domVirtual.js test/dist/**"
   },
   "repository": {
     "type": "git",
@@ -61,5 +63,10 @@
   "engines": {
     "node": ">=0.8.0"
   },
-  "main": "./dist/digihelp.js"
+  "main": "./dist/digihelp.js",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "jsdom": "^13.0.0",
+    "mocha": "^5.2.0"
+  }
 }
