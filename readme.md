@@ -44,6 +44,8 @@
  Adicione os atibutos a seguir na tag HTML do componente.
  
  - Para personalizar o conteudo do botão com o texto que preferir `data-ajuda data-titulo-ajuda-botao="texto que preferir"`
+ - Para personalizar o layout do botão como preferir, utilize `data-ajuda-botao-tipo="classe css que preferir"`
+ - Para adicionar um icone ao botão, utilize `data-ajuda-botao-icone="classe css que preferir"`
  - Para personalizar o conteudo to titulo da modal utilize `data-ajuda-titulo="Titulo que preferir"` 
  - Para personalizar o botão de fechar o modal utilize `data-ajuda-botao-fechar="classe css que preferir"`
  - Para personalizar o botão de voltar do modal utilize `data-ajuda-botao-voltar="classe css que preferir"`
