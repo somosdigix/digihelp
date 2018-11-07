@@ -2,6 +2,8 @@ export default class BalaoDeAJuda {
     constructor(listaDeAjuda) {
         this.listaDeAjuda = listaDeAjuda;
         this.elementoNoHtml = document.querySelector('[data-ajuda]');
+        this.tipoDeBotao = this.elementoNoHtml.getAttribute('data-ajuda-botao-tipo') ? this.elementoNoHtml.getAttribute('data-ajuda-botao-tipo') : ' botao_medio';
+        this.iconeDoBotao = this.elementoNoHtml.getAttribute('data-ajuda-botao-icone') ? this.elementoNoHtml.getAttribute('data-ajuda-botao-icone') : '';
         this.tituloDoBotao = this.elementoNoHtml.getAttribute('data-titulo-ajuda-botao') ? this.elementoNoHtml.getAttribute('data-titulo-ajuda-botao') : 'Precisa de ajuda?';
         this.tituloDoBalao = this.elementoNoHtml.getAttribute('data-ajuda-titulo') ? this.elementoNoHtml.getAttribute('data-ajuda-titulo') : 'Precisa de ajuda?';
         this.iconeFecharBalao = this.elementoNoHtml.getAttribute('data-ajuda-botao-fechar') ? this.elementoNoHtml.getAttribute('data-ajuda-botao-fechar') : ' far fa-times-circle fa-lg';
@@ -18,7 +20,7 @@ export default class BalaoDeAJuda {
 
     criarConteudoHtmlDoBotaoDeAjuda(htmlDoConteudo) {
         return `
-                <button data-ajuda-botao class="botao botao_medio">${this.tituloDoBotao}</button>
+                <button data-ajuda-botao class="botao ${this.tipoDeBotao}"><i class="${this.iconeDoBotao}" aria-hidden="true"></i>${this.tituloDoBotao}</button>
                 <div class="central-ajuda central-ajuda__oculto" data-central-ajuda>
                     <header class="central-ajuda__cabecalho">
                         <div class="grade__coluna u-margem-esquerda-pequena"> 
