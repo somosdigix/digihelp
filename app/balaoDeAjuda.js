@@ -1,3 +1,5 @@
+import Draggble from 'draggable';
+
 export default class BalaoDeAJuda {
     constructor(listaDeAjuda) {
         this.listaDeAjuda = listaDeAjuda;
@@ -48,7 +50,8 @@ export default class BalaoDeAJuda {
     registrarAcaoNoBotaoDeAjuda() {
         let botaoDeAjuda = this.elementoNoHtml.querySelector('[data-ajuda-botao]');
         botaoDeAjuda.addEventListener('click', () => {
-            this.elementoNoHtml.querySelector('[data-central-ajuda]').classList.remove('central-ajuda__oculto');
+            this.elementoNoHtml.querySelector('[data-central-ajuda]').classList.remove('central-ajuda__oculto');            
+            this.configurarElementoComoArrastavel();
         });
     }
 
@@ -80,6 +83,7 @@ export default class BalaoDeAJuda {
         botaoVoltar.addEventListener('click', () => {
             this.configurarOConteudoDoBalao();
             this.elementoNoHtml.querySelector('[data-central-ajuda]').classList.remove('central-ajuda__oculto');
+            this.configurarElementoComoArrastavel();
         });
     }
 
@@ -115,6 +119,29 @@ export default class BalaoDeAJuda {
             urlAtual = urlAtual + '/';
         }
         return urlAtual;
+    }
+
+    configurarElementoComoArrastavel() {
+        let posicaoAnteriorDoElementoArrastavel = this.obterAUltimaPosicaoDoElementoArrastavel();
+        let balaoDeAJuda = this.elementoNoHtml.querySelector('[data-central-ajuda]');
+        let cabecalhoDoBalaoDeAjuda = balaoDeAJuda.querySelector('header');
+        this.elementoArrastavel = new Draggble(balaoDeAJuda, {
+            useGPU: true,
+            handle: cabecalhoDoBalaoDeAjuda
+        });
+        if(posicaoAnteriorDoElementoArrastavel) {
+            this.elementoArrastavel.set(posicaoAnteriorDoElementoArrastavel.x, posicaoAnteriorDoElementoArrastavel.y);
+        }
+        balaoDeAJuda.style.height = 'auto';
+    }
+
+    obterAUltimaPosicaoDoElementoArrastavel() {
+        let posicaoAnteriorDoElementoArrastavel;
+        if(this.elementoArrastavel) {
+            posicaoAnteriorDoElementoArrastavel = this.elementoArrastavel.get();
+            this.elementoArrastavel.destroy();
+        }
+        return posicaoAnteriorDoElementoArrastavel;
     }
 
 }

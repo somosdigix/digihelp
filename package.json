@@ -1,7 +1,7 @@
 {
   "name": "digihelp",
   "description": "Um componente frontend que cria uma modal de instruções para o usuário.",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "author": {
     "name": "Diego Paniago",
     "email": "diegopaniago@digix.com.br",
@@ -38,6 +38,7 @@
     "babel-register": "^6.26.0",
     "browser-sync": "^2.26.3",
     "css-loader": "^1.0.0",
+    "draggable": "^4.2.0",
     "file-loader": "^2.0.0",
     "html-loader": "^0.5.5",
     "node-sass": "^4.9.4",

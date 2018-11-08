@@ -1,13 +1,12 @@
 .central-ajuda {
     width: 344px;
-    max-height: 760px;
     border-radius: 5px;
     box-shadow: 0px 0px 50px 0px rgba($cor-preta,.25);
     z-index: 999;
     position: fixed;
-    overflow-y: scroll;
+    overflow: hidden;
     margin-top: 48px;
-    background-color: $cor-branca
+    background-color: $cor-branca;
 }
 
 .central-ajuda__cabecalho {
@@ -20,12 +19,15 @@
     position: fixed;
     width: 344px;
     box-shadow: 0 5px 5px 0 rgba($cor-preta,.1);
+    cursor: move;
 }
 
 .central-ajuda__conteudo {
     background-color: $cor-branca;
     border-radius: 0 0 5px 5px;
     margin: 63px 8px 0 8px;
+    overflow-y: scroll;
+    max-height: 30em;
 }
 
 .central-ajuda__conteudo-item {
