@@ -23,11 +23,11 @@ export default class BalaoDeAJuda {
                 <button data-ajuda-botao class="botao ${this.tipoDeBotao}"><i class="${this.iconeDoBotao}" aria-hidden="true"></i>${this.tituloDoBotao}</button>
                 <div class="central-ajuda central-ajuda__oculto" data-central-ajuda>
                     <header class="central-ajuda__cabecalho">
-                        <div class="grade__coluna u-margem-esquerda-pequena"> 
+                        <div class="grade__coluna-central-ajuda u-margem-esquerda-pequena"> 
                             <a class="u-margem-direita-mini central-ajuda__cursor-indicador central-ajuda__oculto ${this.iconeVoltarBalao}" data-ajuda-voltar></a>
                             <span class="titulo_mini u-texto-negrito">${this.tituloDoBalao}</span>
                         </div>
-                        <div class="grade__coluna grade__coluna_estreita central-ajuda__cursor-indicador" data-ajuda-fechar>
+                        <div class="grade__coluna-central-ajuda grade__coluna_estreita-central-ajuda central-ajuda__cursor-indicador" data-ajuda-fechar>
                             <a class="u-margem-direita-pequena ${this.iconeFecharBalao}"></a>
                         </div>
                     </header>
@@ -87,8 +87,8 @@ export default class BalaoDeAJuda {
         let htmlDoConteudo = '';
         informacoesParaMostrar.forEach((informacaoParaMostrar) => {
             htmlDoConteudo +=  `<div class="central-ajuda__conteudo-item" data-opcao-de-ajuda>
-                                    <span class="grade__coluna grade__coluna_estreita u-margem-esquerda-pequena u-margem-direita-pequena texto_cor-info ${informacaoParaMostrar.icone} fa-lg"></span>
-                                    <span class="grade__coluna texto_cor-cinza-80" data-opcao-de-ajuda-titulo>${informacaoParaMostrar.titulo}</span>
+                                    <span class="grade__coluna-central-ajuda grade__coluna_estreita-central-ajuda u-margem-esquerda-pequena u-margem-direita-pequena texto_cor-info ${informacaoParaMostrar.icone} fa-lg"></span>
+                                    <span class="grade__coluna-central-ajuda texto_cor-cinza-80" data-opcao-de-ajuda-titulo>${informacaoParaMostrar.titulo}</span>
                                 </div>`
         });
         return htmlDoConteudo;
