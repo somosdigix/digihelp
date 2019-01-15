@@ -103,7 +103,7 @@ export default class BalaoDeAJuda {
         let urlAtual = this.obterUrlAtual();
         this.listaDeAjuda.forEach((itemDaListaDeAjuda) => {
             itemDaListaDeAjuda.url.forEach((urlDoItemDaListaDeAjuda) => {
-                let urlComRegex = urlDoItemDaListaDeAjuda.replace('{param}', '([^}]+)');
+                let urlComRegex = urlDoItemDaListaDeAjuda.split('{param}').join('([^}]+)');
                 urlComRegex = urlComRegex.replace('{fim}', '$');
                 if(urlAtual.match(urlComRegex) && !itensDeAjudaFiltrados.includes(itemDaListaDeAjuda)) {                    
                     itensDeAjudaFiltrados.push(itemDaListaDeAjuda);
