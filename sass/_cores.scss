@@ -1,8 +1,8 @@
 // Cores variáveis 
 
-$cor-primaria: #2C006A !default;
-$cor-secundaria: #0bc0d3 !default;
-$cor-terciaria: #190342 !default;
+$cor-primaria-digihelp: #2C006A !default;
+$cor-secundaria-digihelp: #0bc0d3 !default;
+$cor-terciaria-digihelp: #190342 !default;
 
 
 // ATENÇÃO! Não utilize essas variáveis fora deste arquivo
@@ -31,9 +31,9 @@ $cor-texto-alerta: $vermelho;
 
 // Cores invertidas
 
-$cor-primaria-invertida: inverterCor($cor-primaria);
-$cor-secundaria-invertida: inverterCor($cor-secundaria);
-$cor-terciaria-invertida: inverterCor($cor-terciaria);
+$cor-primaria-invertida-digihelp: inverterCor($cor-primaria-digihelp);
+$cor-secundaria-invertida-digihelp: inverterCor($cor-secundaria-digihelp);
+$cor-terciaria-invertida-digihelp: inverterCor($cor-terciaria-digihelp);
 
 // Tons de cinza
 
@@ -68,13 +68,13 @@ $cor-cinza-20-invertido: inverterCor($cor-cinza-20);
 $cor-cinza-10-invertido: inverterCor($cor-cinza-10);
 $cor-cinza-05-invertido: inverterCor($cor-cinza-05);
 
-$cores: ("cor-branca": ($cor-branca, $cor-preta), "cor-preta": ($cor-preta, $cor-branca), "cor-cinza-05": ($cor-cinza-05, $cor-cinza-05-invertido), "cor-cinza-10": ($cor-cinza-10, $cor-cinza-10-invertido), "cor-cinza-20": ($cor-cinza-20, $cor-cinza-20-invertido), "cor-cinza-30": ($cor-cinza-30, $cor-cinza-30-invertido), "cor-cinza-40": ($cor-cinza-40, $cor-cinza-40-invertido), "cor-cinza-50": ($cor-cinza-50, $cor-cinza-50-invertido), "cor-cinza-60": ($cor-cinza-60, $cor-cinza-60-invertido), "cor-cinza-70": ($cor-cinza-70, $cor-cinza-70-invertido), "cor-cinza-80": ($cor-cinza-80, $cor-cinza-80-invertido), "cor-cinza-90": ($cor-cinza-90, $cor-cinza-90-invertido), "cor-primaria": ($cor-primaria, $cor-primaria-invertida), "cor-secundaria": ($cor-secundaria, $cor-secundaria-invertida), "cor-terciaria": ($cor-terciaria, $cor-terciaria-invertida), "cor-info": ($cor-info, $cor-info-invertido), "cor-sucesso": ($cor-sucesso, $cor-sucesso-invertido), "cor-atencao": ($cor-atencao, $cor-atencao-invertido), "cor-erro": ($cor-erro, $cor-erro-invertido)) !default;
+$cores: ("cor-branca": ($cor-branca, $cor-preta), "cor-preta": ($cor-preta, $cor-branca), "cor-cinza-05": ($cor-cinza-05, $cor-cinza-05-invertido), "cor-cinza-10": ($cor-cinza-10, $cor-cinza-10-invertido), "cor-cinza-20": ($cor-cinza-20, $cor-cinza-20-invertido), "cor-cinza-30": ($cor-cinza-30, $cor-cinza-30-invertido), "cor-cinza-40": ($cor-cinza-40, $cor-cinza-40-invertido), "cor-cinza-50": ($cor-cinza-50, $cor-cinza-50-invertido), "cor-cinza-60": ($cor-cinza-60, $cor-cinza-60-invertido), "cor-cinza-70": ($cor-cinza-70, $cor-cinza-70-invertido), "cor-cinza-80": ($cor-cinza-80, $cor-cinza-80-invertido), "cor-cinza-90": ($cor-cinza-90, $cor-cinza-90-invertido), "cor-primaria": ($cor-primaria-digihelp, $cor-primaria-invertida-digihelp), "cor-secundaria": ($cor-secundaria-digihelp, $cor-secundaria-invertida-digihelp), "cor-terciaria": ($cor-terciaria-digihelp, $cor-terciaria-invertida-digihelp), "cor-info": ($cor-info, $cor-info-invertido), "cor-sucesso": ($cor-sucesso, $cor-sucesso-invertido), "cor-atencao": ($cor-atencao, $cor-atencao-invertido), "cor-erro": ($cor-erro, $cor-erro-invertido)) !default;
 
 // Cores dos botões
 $cor-botao-acao: $azul;
 $cor-botao-acao-invertida: inverterCor($cor-botao-acao);
 
-$cores-dos-botoes: ("cor-branca": ($cor-branca, $cor-preta), "cor-cinza": ($cor-cinza-50, $cor-cinza-50-invertido), "cor-primaria": ($cor-primaria, $cor-primaria-invertida), "cor-secundaria": ($cor-secundaria, $cor-secundaria-invertida), "cor-terciaria": ($cor-terciaria, $cor-terciaria-invertida), "cor-info": ($cor-info, $cor-info-invertido), "cor-sucesso": ($cor-sucesso, $cor-sucesso-invertido), "cor-atencao": ($cor-atencao, $cor-atencao-invertido), "cor-perigo": ($cor-erro, $cor-erro-invertido), 
+$cores-dos-botoes: ("cor-branca": ($cor-branca, $cor-preta), "cor-cinza": ($cor-cinza-50, $cor-cinza-50-invertido), "cor-primaria": ($cor-primaria-digihelp, $cor-primaria-invertida-digihelp), "cor-secundaria": ($cor-secundaria-digihelp, $cor-secundaria-invertida-digihelp), "cor-terciaria": ($cor-terciaria-digihelp, $cor-terciaria-invertida-digihelp), "cor-info": ($cor-info, $cor-info-invertido), "cor-sucesso": ($cor-sucesso, $cor-sucesso-invertido), "cor-atencao": ($cor-atencao, $cor-atencao-invertido), "cor-perigo": ($cor-erro, $cor-erro-invertido), 
 //Cores legadas
-"branca": ($cor-branca, $cor-preta), "cinza": ($cor-cinza-50, $cor-cinza-50-invertido), "primaria": ($cor-primaria, $cor-primaria-invertida), "secundaria": ($cor-secundaria, $cor-secundaria-invertida), "terciaria": ($cor-terciaria, $cor-terciaria-invertida), "info": ($cor-info, $cor-info-invertido), "sucesso": ($cor-sucesso, $cor-sucesso-invertido), "atencao": ($cor-atencao, $cor-atencao-invertido), "alerta": ($cor-erro, $cor-erro-invertido), "erro": ($cor-erro, $cor-erro-invertido)
+"branca": ($cor-branca, $cor-preta), "cinza": ($cor-cinza-50, $cor-cinza-50-invertido), "primaria": ($cor-primaria-digihelp, $cor-primaria-invertida-digihelp), "secundaria": ($cor-secundaria-digihelp, $cor-secundaria-invertida-digihelp), "terciaria": ($cor-terciaria-digihelp, $cor-terciaria-invertida-digihelp), "info": ($cor-info, $cor-info-invertido), "sucesso": ($cor-sucesso, $cor-sucesso-invertido), "atencao": ($cor-atencao, $cor-atencao-invertido), "alerta": ($cor-erro, $cor-erro-invertido), "erro": ($cor-erro, $cor-erro-invertido)
 ) !default;
