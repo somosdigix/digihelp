@@ -137,3 +137,15 @@ $tamanhos-de-espaco:  (mini, 4px),
 .u-exibir-em-linha-flexivel {
   display: inline-flex !important;
 }
+
+@media screen{
+  .u-apenas-impressao {
+    display: none;
+  }
+}
+
+@media print {
+  .u-nao-imprimir {
+      display: none;
+  }
+}

@@ -3,7 +3,7 @@
 }
 
 @mixin borda-arredondada-padrao {
-  border-radius: 5px;
+  border-radius: 8px;
 }
 
 @mixin sombra-padrao($direcao) {
@@ -84,18 +84,27 @@
 
 // Pontos de quebra
 
-@mixin somente-telefone {
+@mixin quebra-somente-telefone {
   @media (max-width: 599px) { @content; }
 }
-@mixin maior-que-telefone {
+@mixin quebra-maior-que-telefone {
   @media (min-width: 600px) { @content; }
 }
-@mixin maior-que-tablet {
+@mixin quebra-maior-que-tablet {
   @media (min-width: 900px) { @content; }
 }
-@mixin maior-que-desktop-pequeno {
+@mixin quebra-menor-que-tablet {
+  @media (max-width: 899px) { @content; }
+}
+@mixin quebra-maior-que-desktop-pequeno {
   @media (min-width: 1200px) { @content; }
 }
-@mixin maior-que-desktop-grande {
+@mixin quebra-menor-que-desktop-pequeno {
+  @media (max-width: 1199px) { @content; }
+}
+@mixin quebra-maior-que-desktop-grande {
   @media (min-width: 1800px) { @content; }
+}
+@mixin quebra-menor-que-desktop-grande {
+  @media (max-width: 1799px) { @content; }
 }

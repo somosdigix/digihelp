@@ -1,7 +1,6 @@
 // Bloco
 .botao {
   @include borda-arredondada-padrao();
-  @include transicao-padrao();
   @include fonte-seminegrito();
   font-family: $fonte-padrao;
   display: inline-block;
@@ -14,6 +13,7 @@
   font-size: 16px;
   height: 40px;
   padding: 0 16px;
+  position: relative;
   &:hover,
   &:focus {
     background-color: darken(saturate($cor-botao-acao, 100%), 15%);
@@ -22,13 +22,14 @@
     outline: none;
   }
   &:active {
-    transform: translateY(1px);
+    top: 1px;
   }
 }
 
 a.botao {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   &:hover {
     text-decoration: none;
   }
@@ -88,6 +89,10 @@ a.botao {
   }
 }
 
+.botao_largura-total {
+  width: 100%;
+}
+
 // Modificadores de tamanho
 .botao_mini {
   height: 24px;
@@ -139,14 +144,14 @@ a.botao {
 }
 
 .botao_com-icone-para-esquerda {
-  svg {
+  :before, svg {
     margin-right: 4px;
     flex-shrink: 0;
   }
 }
 
 .botao_com-icone-para-direita {
-  svg {
+  :before, svg {
     margin-left: 4px;
     flex-shrink: 0;
   }
